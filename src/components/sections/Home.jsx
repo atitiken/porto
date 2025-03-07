@@ -10,13 +10,30 @@ export const Home = () => {
     const container = logosContainerRef.current;
     if (!container) return;
 
-    const logoItems = container.querySelectorAll('.tech-logo-item');
+    const logoItems = container.querySelectorAll(".tech-logo-item");
 
     // Apply waving effect using CSS animation
     logoItems.forEach((item, index) => {
       item.style.animation = `waveEffect 2s ease-in-out ${index * 0.15}s infinite alternate`;
     });
   }, []);
+
+  // Handle smooth scrolling for buttons
+  const handleNavLinkClick = (e, targetId) => {
+    e.preventDefault();
+    const targetElement = document.querySelector(targetId);
+
+    if (targetElement) {
+      const navbarHeight = 64; // Adjust for fixed navbar height
+      const targetPosition =
+        targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
+
+      window.scrollTo({
+        top: targetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   // Skill Logos
   const techLogos = [
@@ -26,7 +43,7 @@ export const Home = () => {
     { name: "React", color: "#61DAFB", icon: <SiReact /> },
     { name: "HTML", color: "#E34F26", icon: <SiHtml5 /> },
     { name: "C", color: "#A8B9CC", icon: <SiC /> },
-    { name: "Kaggle", color: "#20BEFF", icon: <SiKaggle /> }
+    { name: "Kaggle", color: "#20BEFF", icon: <SiKaggle /> },
   ];
 
   return (
@@ -48,13 +65,15 @@ export const Home = () => {
           <div className="flex justify-center space-x-4">
             <a
               href="#projects"
-              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-lg"
+              onClick={(e) => handleNavLinkClick(e, "#projects")}
+              className="bg-blue-500 text-white py-3 px-6 rounded font-medium transition hover:-translate-y-0.5 hover:shadow-lg cursor-pointer"
             >
               View Projects
             </a>
             <a
               href="#contact"
-              className="border border-blue-500 text-blue-500 py-3 px-6 rounded font-medium transition hover:bg-blue-500/10"
+              onClick={(e) => handleNavLinkClick(e, "#contact")}
+              className="border border-blue-500 text-blue-500 py-3 px-6 rounded font-medium transition hover:bg-blue-500/10 cursor-pointer"
             >
               Contact Me
             </a>
@@ -73,7 +92,7 @@ export const Home = () => {
                 className="tech-logo-item flex flex-col items-center justify-center p-3 border border-gray-700 rounded-lg w-24 h-24 transition-all duration-300 hover:-translate-y-1"
                 style={{
                   backgroundColor: `${tech.color}10`,
-                  color: tech.color
+                  color: tech.color,
                 }}
               >
                 <div className="text-4xl mb-2">{tech.icon}</div>
