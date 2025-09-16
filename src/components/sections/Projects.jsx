@@ -33,6 +33,7 @@ export const Projects = () => {
               <h3 className="text-xl font-bold mb-2">Brain Tumor Classification</h3>
               <p className="text-gray-400 mb-4">
                  Brain tumor computer classification using efficientnet-b1.
+                 Deployed on streamlit
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["Python", "Pytorch", "Pandas"].map((tech, key) => (
@@ -50,6 +51,12 @@ export const Projects = () => {
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
+                </a>
+                <a
+                  href="https://aolaerielnat.streamlit.app/"
+                  className="text-blue-400 hover:text-blue-300 transition-colors my-4"
+                >
+                  View Web Application →
                 </a>
               </div>
             </div>
