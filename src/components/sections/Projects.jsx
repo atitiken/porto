@@ -30,9 +30,9 @@ export const Projects = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="p-6 rounded-xl border border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-              <h3 className="text-xl font-bold mb-2">Pose Detection Using AI Model</h3>
+              <h3 className="text-xl font-bold mb-2">Brain Tumor Classification</h3>
               <p className="text-gray-400 mb-4">
-                Staff work efficiency monitoring using realtime pose detection.
+                 Brain tumor computer classification using efficientnet-b1.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["OpenCV", "Python", "Mediapipe"].map((tech, key) => (
@@ -46,7 +46,7 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  href="#"
+                  href="https://github.com/atitiken/AOL_ML"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
                   View Project →
@@ -61,9 +61,10 @@ export const Projects = () => {
               transition-all
             "
             >
-              <h3 className="text-xl font-bold mb-2">Bone Fracture Detection Using CNN Model</h3>
+              <h3 className="text-xl font-bold mb-2">Tiny vs. Tinier: Baseline ViT-Tiny vs. Ensemble-Distilled Student on
+Imbalanced Fracture Detection</h3>
               <p className="text-gray-400 mb-4">
-                Arm bone fracture prediction using pretrained models (Resnet-50, InceptionV3, Efficientnet-B0, Densenet121).
+                We distilled CNN teacher ensembles into a lightweight ViT-Tiny, achieving higher F1 and MCC while reducing false negatives — proving lightweight models can be both efficient and clinically reliable.
               </p>
               <div className="flex flex-wrap gap-2 mb-4">
                 {["Python", "Pytorch", "Pandas"].map((tech, key) => (
@@ -77,10 +78,10 @@ export const Projects = () => {
               </div>
               <div className="flex justify-between items-center">
                 <a
-                  
+                  href="https://github.com/atitiken/Tiny-vs.-Tinier-Baseline-ViT-Tiny-vs.-Ensemble-Distilled-Student-on-Imbalanced-Fracture-Detection"
                   className="text-blue-400 hover:text-blue-300 transition-colors my-4"
                 >
-                  -Ongoing-
+                  View Project →
                 </a>
               </div>
             </div>
