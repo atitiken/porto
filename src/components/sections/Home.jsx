@@ -77,14 +77,7 @@ export const Home = () => {
             >
               Contact Me
             </a>
-            <a
-              href="https://your-cv-link.com/cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-blue-500 text-blue-500 py-3 px-6 rounded font-medium transition hover:bg-blue-500/10 cursor-pointer"
-            >
-              My CV
-            </a>
+            <a href="https://raw.githubusercontent.com/username/portfolio/main/cv.pdf" target="_blank" rel="noopener noreferrer">My CV</a>
           </div>
         </div>
       </RevealOnScroll>
