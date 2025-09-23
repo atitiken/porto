@@ -78,7 +78,7 @@ export const Home = () => {
               Contact Me
             </a>
             <a
-              href="public\Aeriel_Resume_with_photo.pdf"
+              href="public\Aeriel_Resume_no_photo.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-blue-500 text-blue-500 py-3 px-6 rounded font-medium transition hover:bg-blue-500/10 cursor-pointer">
