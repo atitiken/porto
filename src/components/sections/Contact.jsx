@@ -5,7 +5,6 @@ export const Contact = () => {
   const handleEmailClick = (e) => {
     e.preventDefault();
 
-    const email = "aeriel.n221940@gmail.com";
     const subject = "Let's Connect!";
     const body = "Hi, I’d love to get in touch.";
 
